@@ -1,0 +1,68 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+
+// VS Code update surface:
+// - replace hero asset paths when production stills are available
+// - edit gallery records + selected record IDs from one place
+const galleryConfig = {
+	heroAssets: [
+		{ src: '/images/hero-01.svg', alt: 'CALLMEISRAEL moody archival still', label: 'Hero-01' },
+		{ src: '/images/hero-02.svg', alt: 'CALLMEISRAEL portrait archival still', label: 'Hero-02' }
+	],
+	records: [
+		{
+			id: 'callmeisrael-2026',
+			title: 'CALLMEISRAEL, 2026',
+			year: '2026',
+			type: 'Digital Architecture',
+			role: 'Implementation',
+			scope: 'Commissioned structure for performance archive',
+			status: 'Active. 2026.01',
+			documentation: 'Custody protocol, performance media schema, and archive release controls.'
+		},
+		{
+			id: 'night-index-2025',
+			title: 'NIGHT INDEX, 2025',
+			year: '2025',
+			type: 'Oversight',
+			role: 'Oversight',
+			scope: 'Custody model for event documentation and release protocol',
+			status: 'Published. 2025.10',
+			documentation: 'Decision log, contributor accountability framework, and publication timeline.'
+		},
+		{
+			id: 'field-room-2024',
+			title: 'FIELD ROOM, 2024',
+			year: '2024',
+			type: 'Implementation',
+			role: 'Advisory',
+			scope: 'Digital environment for long-horizon cultural program operations',
+			status: 'Archived. 2024.12',
+			documentation: 'Runtime structure map, migration notes, and archival integrity checklist.'
+		}
+	],
+	selectedRecordIds: ['callmeisrael-2026', 'night-index-2025']
+} as const;
+
+const selectedRecords = galleryConfig.records.filter((record) =>
+	galleryConfig.selectedRecordIds.includes(record.id)
+);
+
+const galleryRecords = galleryConfig.records.map(({ id, ...record }) => record);
+---
+
+<Layout>
+	<Welcome
+		view="gallery"
+		kicker="LSJ Systems (est. 2024)"
+		headline="Work / Gallery"
+		inscription="What endures is built deliberately."
+		primaryLabel="Begin Strategy Session"
+		primaryHref="mailto:hello@lsjsystems.com?subject=Strategy%20Session"
+		registryLabel="Registry"
+		records={galleryRecords}
+		heroAssets={galleryConfig.heroAssets}
+		selectedRecords={selectedRecords}
+	/>
+</Layout>
