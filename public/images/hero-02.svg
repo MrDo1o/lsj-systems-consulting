@@ -1,0 +1,12 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E9DFCF"/>
+      <stop offset="1" stop-color="#CBB9A2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#g2)"/>
+  <ellipse cx="860" cy="520" rx="320" ry="360" fill="#9A7C62" fill-opacity="0.28"/>
+  <ellipse cx="860" cy="500" rx="190" ry="240" fill="#D5C2AC" fill-opacity="0.35"/>
+  <text x="180" y="770" fill="#1D1713" fill-opacity="0.7" font-size="66" font-family="Didot, Bodoni MT, serif" letter-spacing="8">HERO-02</text>
+</svg>
