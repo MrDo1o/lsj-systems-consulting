@@ -1,0 +1,16 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050608"/>
+      <stop offset="1" stop-color="#1B1C22"/>
+    </linearGradient>
+    <radialGradient id="fog" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(760 520) rotate(90) scale(460 760)">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#g1)"/>
+  <rect width="1600" height="1000" fill="url(#fog)"/>
+  <rect x="116" y="90" width="420" height="820" fill="#111319" fill-opacity="0.5"/>
+  <text x="800" y="220" text-anchor="middle" fill="#EBE6DA" fill-opacity="0.45" font-size="88" font-family="Didot, Bodoni MT, serif" letter-spacing="12">CALLMEISRAEL</text>
+</svg>
